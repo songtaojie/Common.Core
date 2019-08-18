@@ -1,0 +1,115 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HxCore.Common</name>
+    </assembly>
+    <members>
+        <member name="T:HxCore.Common.AppSettings">
+            <summary>
+            读取appsettings.json中的配置的类
+            </summary>
+        </member>
+        <member name="F:HxCore.Common.AppSettings.Path">
+            <summary>
+            appsettings.json
+            </summary>
+        </member>
+        <member name="M:HxCore.Common.AppSettings.#ctor(Microsoft.AspNetCore.Hosting.IHostingEnvironment)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="env">环境对象</param>
+        </member>
+        <member name="M:HxCore.Common.AppSettings.Get(System.String[])">
+            <summary>
+            封装要操作的字符
+            </summary>
+            <param name="sections">配置节点</param>
+            <returns></returns>
+        </member>
+        <member name="M:HxCore.Common.AppSettings.Get``1(System.String)">
+            <summary>
+            获取配置
+            </summary>
+            <typeparam name="T">要映射的类</typeparam>
+            <param name="section">配置节点</param>
+            <returns></returns>
+        </member>
+        <member name="T:HxCore.Common.Helper">
+            <summary>
+            帮助类
+            </summary>
+        </member>
+        <member name="M:HxCore.Common.Helper.AreEqual(System.String,System.String)">
+            <summary>
+            比较字符串，忽略大小写
+            </summary>
+        </member>
+        <member name="M:HxCore.Common.Helper.IsYes(System.String)">
+            <summary>
+            判断当前字符串是否为Y
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HxCore.Common.Helper.IsNo(System.String)">
+            <summary>
+            判断当前字符串是否为N
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HxCore.Common.Helper.ToStr(System.Object)">
+            <summary>
+            转化为字符串
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HxCore.Common.Helper.ToHex(System.Object)">
+            <summary>
+            将对象转换成16进制的字符形式
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HxCore.Common.Helper.FromHex(System.String)">
+            <summary>
+            将16进制的字符形式转换成字符串
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HxCore.Common.Helper.GetSnowId">
+            <summary>
+            获取雪花ID
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:HxCore.Common.Snowflake">
+            <summary>
+            动态生产有规律的ID Snowflake算法是Twitter的工程师为实现递增而不重复的ID实现的
+            C# 实现 Snowflake算法 
+            </summary>
+        </member>
+        <member name="M:HxCore.Common.Snowflake.GetTimestamp">
+            <summary>
+            生成当前时间戳
+            </summary>
+            <returns>毫秒</returns>
+        </member>
+        <member name="M:HxCore.Common.Snowflake.GetNextTimestamp(System.Int64)">
+            <summary>
+            获取下一微秒时间戳
+            </summary>
+            <param name="lastTimestamp"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HxCore.Common.Snowflake.GetId">
+            <summary>
+            获取长整形的ID
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
